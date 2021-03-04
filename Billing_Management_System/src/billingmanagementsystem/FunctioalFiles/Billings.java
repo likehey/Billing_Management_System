@@ -643,7 +643,7 @@ public class Billings extends javax.swing.JFrame {
 
                 java.util.Map<com.itextpdf.text.pdf.qrcode.EncodeHintType, Object> hints = new java.util.HashMap<com.itextpdf.text.pdf.qrcode.EncodeHintType, Object>();
                 hints.put(com.itextpdf.text.pdf.qrcode.EncodeHintType.CHARACTER_SET, "ISO-8859-1");
-                com.itextpdf.text.pdf.BarcodeQRCode qrCode = new com.itextpdf.text.pdf.BarcodeQRCode("Billings kc", 200, 200, hints);
+                com.itextpdf.text.pdf.BarcodeQRCode qrCode = new com.itextpdf.text.pdf.BarcodeQRCode("https://github.com/kclaudeeager/Billing_Management_System", 200, 200, hints);
                 com.itextpdf.text.Image qrCodeImage = qrCode.getImage();
 
                // qrCodeTable.addCell(qrCodeImage);
