@@ -347,7 +347,7 @@ public class NewProduct extends javax.swing.JFrame {
                 // TODO add your handling code here:
  try{
         Connection con=Connections.getcon();
-        Statement st=con.createStatement();
+        Statement st=con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_UPDATABLE);
         ResultSet rs=st.executeQuery("select max(PID) from product");
         if(rs.first())
         {
