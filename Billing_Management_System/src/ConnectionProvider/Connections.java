@@ -18,9 +18,10 @@ public class Connections {
     try{
        Class.forName("com.mysql.jdbc.Driver");
 
-        Connection conn=DriverManager.getConnection( "jdbc:mysql://localhost:3306/bms","root","");
+        Connection conn=DriverManager.getConnection( "jdbc:mysql://localhost:3306/bms","root","Hirwa100");
         return conn;
     }   catch (Exception ex) {
+        ex.printStackTrace();
            return null;
         }
     

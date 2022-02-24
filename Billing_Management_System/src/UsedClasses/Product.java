@@ -15,10 +15,10 @@ public class Product {
     int id;
     double price;
     String pName,pDescription;
-    Client client;
+    User client;
     Date createdAt,modifiedAt;
 
-    public Product(int id, double price, String pName, String pDescription, Client supplier, Date createdAt, Date modifiedAt) {
+    public Product(int id, double price, String pName, String pDescription, User supplier, Date createdAt, Date modifiedAt) {
         this.id = id;
         this.price = price;
         this.pName = pName;
@@ -28,7 +28,7 @@ public class Product {
         this.modifiedAt = modifiedAt;
     }
 
-    public Product(double price, String pName, String pDescription, Client supplier) {
+    public Product(double price, String pName, String pDescription, User supplier) {
         this.price = price;
         this.pName = pName;
         this.pDescription = pDescription;
@@ -70,11 +70,11 @@ public class Product {
         this.pDescription = pDescription;
     }
 
-    public Client getSupplier() {
+    public User getSupplier() {
         return client;
     }
 
-    public void setSupplier(Client supplier) {
+    public void setSupplier(User supplier) {
         this.client = supplier;
     }
 

@@ -18,7 +18,7 @@ public class productDestination {
     String place;
     String carPlak;
     Date goneDate;
-    Client client;
+    User client;
     @Override
     public String toString() {
         return "productDestination{" + "id=" + id + ", products=" + products + ", place=" + place + ", carPlak=" + carPlak + ", goneDate=" + goneDate + ", client=" + client + '}';
@@ -64,11 +64,11 @@ public class productDestination {
         this.goneDate = goneDate;
     }
 
-    public Client getClient() {
+    public User getClient() {
         return client;
     }
 
-    public void setClient(Client client) {
+    public void setClient(User client) {
         this.client = client;
     }
 
@@ -80,7 +80,7 @@ public class productDestination {
     }
  
 
-    public productDestination(List<Product> products, String place, String carPlak, Date goneDate, Client client) {
+    public productDestination(List<Product> products, String place, String carPlak, Date goneDate, User client) {
         this.products = products;
         this.place = place;
         this.carPlak = carPlak;

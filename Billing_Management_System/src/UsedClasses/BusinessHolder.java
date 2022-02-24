@@ -7,8 +7,9 @@ package UsedClasses;
 
 /**
  *
- * @author Kwizera Claude
+ * @author paterneN
  */
-public class Buyer {
-    
+public class BusinessHolder extends User{
+    int tin;
+    String companyName;
 }

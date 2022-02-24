@@ -9,20 +9,14 @@ package UsedClasses;
  *
  * @author Kwizera Claude
  */
-public class Client {
+public class User {
     int id;
-    int tin;
     String name;
+    String nId;
+    char sex;
+    String nationality;
 
-    public Client(int id, int tin, String name) {
-        this.id = id;
-        this.tin = tin;
-        this.name = name;
-    }
-
-    public Client(int tin, String name) {
-        this.tin = tin;
-        this.name = name;
+    public User() {
     }
 
     public int getId() {
@@ -33,14 +27,6 @@ public class Client {
         this.id = id;
     }
 
-    public int getTin() {
-        return tin;
-    }
-
-    public void setTin(int tin) {
-        this.tin = tin;
-    }
-
     public String getName() {
         return name;
     }
@@ -49,9 +35,31 @@ public class Client {
         this.name = name;
     }
 
-    @Override
-    public String toString() {
-        return "Supplier{" + "id=" + id + ", tin=" + tin + ", name=" + name + '}';
+    public String getnId() {
+        return nId;
     }
+
+    public void setnId(String nId) {
+        this.nId = nId;
+    }
+
+    public char getSex() {
+        return sex;
+    }
+
+    public void setSex(char sex) {
+        this.sex = sex;
+    }
+
+    public String getNationality() {
+        return nationality;
+    }
+
+    public void setNationality(String nationality) {
+        this.nationality = nationality;
+    }
+    
+
+   
     
 }
