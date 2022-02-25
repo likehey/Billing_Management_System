@@ -15,24 +15,35 @@ public class Product {
     int id;
     double price;
     String pName,pDescription;
-    User client;
-    Date createdAt,modifiedAt;
+    String[] images;
+    String category;
+    Manufacture manfacture;
+    double taskRate;
+    String barcode;
+    Unity unity;
 
-    public Product(int id, double price, String pName, String pDescription, User supplier, Date createdAt, Date modifiedAt) {
+    public Product(double price, String pName, Manufacture manfacture, double taskRate, Unity unity) {
+        this.price = price;
+        this.pName = pName;
+        this.manfacture = manfacture;
+        this.taskRate = taskRate;
+        this.unity = unity;
+    }
+    
+
+    public Product(int id, double price, String pName, String pDescription) {
         this.id = id;
         this.price = price;
         this.pName = pName;
         this.pDescription = pDescription;
-        this.client = supplier;
-        this.createdAt = createdAt;
-        this.modifiedAt = modifiedAt;
+    
     }
 
-    public Product(double price, String pName, String pDescription, User supplier) {
+    public Product(double price, String pName, String pDescription) {
         this.price = price;
         this.pName = pName;
         this.pDescription = pDescription;
-        this.client = supplier;
+     
     }
 
     public Product() {
@@ -70,34 +81,63 @@ public class Product {
         this.pDescription = pDescription;
     }
 
-    public User getSupplier() {
-        return client;
+
+    public String[] getImages() {
+        return images;
     }
 
-    public void setSupplier(User supplier) {
-        this.client = supplier;
+    public void setImages(String[] images) {
+        this.images = images;
     }
 
-    public Date getCreatedAt() {
-        return createdAt;
+    public String getCategory() {
+        return category;
     }
 
-    public void setCreatedAt(Date createdAt) {
-        this.createdAt = createdAt;
+    public void setCategory(String category) {
+        this.category = category;
     }
 
-    public Date getModifiedAt() {
-        return modifiedAt;
+    public Manufacture getManfacture() {
+        return manfacture;
     }
 
-    public void setModifiedAt(Date modifiedAt) {
-        this.modifiedAt = modifiedAt;
+    public void setManfacture(Manufacture manfacture) {
+        this.manfacture = manfacture;
+    }
+
+    public double getTaskRate() {
+        return taskRate;
+    }
+
+    public void setTaskRate(double taskRate) {
+        this.taskRate = taskRate;
+    }
+
+    public String getBarcode() {
+        return barcode;
+    }
+
+    public void setBarcode(String barcode) {
+        this.barcode = barcode;
+    }
+
+    public Unity getUnity() {
+        return unity;
+    }
+
+    public void setUnity(Unity unity) {
+        this.unity = unity;
     }
 
     @Override
     public String toString() {
-        return "Product{" + "id=" + id + ", price=" + price + ", pName=" + pName + ", pDescription=" + pDescription + ", supplier=" + client + ", createdAt=" + createdAt + ", modifiedAt=" + modifiedAt + '}';
+        return "Product{" + "id=" + id + ", price=" + price + ", pName=" + pName + ", pDescription=" + pDescription + ", createdAt=" + createdAt + ", modifiedAt=" + modifiedAt + ", images=" + images + ", category=" + category + ", manfacture=" + manfacture + ", taskRate=" + taskRate + ", barcode=" + barcode + ", unity=" + unity + '}';
     }
+
+
+
+   
     
     
 }

@@ -15,7 +15,24 @@ public class User {
     String nId;
     char sex;
     String nationality;
+    // Image
+    public User(String name, String nId, char sex, String nationality, Address address) {
+        this.name = name;
+        this.nId = nId;
+        this.sex = sex;
+        this.nationality = nationality;
+        this.address = address;
+    }
 
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+    Address address;
+  
     public User() {
     }
 
